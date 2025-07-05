@@ -54,14 +54,14 @@ Software Download Portal is a modern, responsive web-based download platform for
 
 ## 🚀 Demo
 
-> **🌟 Live Demo**: [**Download Portal**](your-demo-link-here) 
+> **🌟 Live Demo**: [**Download Portal**](https://software-download-portal.vercel.app) 
 > 
 > *Experience the full functionality with live download tracking, progress indicators, and beautiful animations!*
 
 ## 📦 Installation
 
 ### 🌐 Try Online First!
-**Want to see it in action immediately?** Check out the [**Live Demo**](your-demo-link-here) to experience the download portal!
+**Want to see it in action immediately?** Check out the [**Live Demo**](https://software-download-portal.vercel.app) to experience the download portal!
 
 ### Quick Start
 
