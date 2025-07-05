@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download UltraEdit text editor for Windows</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://www.ultraedit.com/wp-content/uploads/2023/01/Dark-logo.png" alt="UltraEdit Logo">
+            </div>
+            
+            <!-- Mobile menu toggle -->
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <div class="right">
+                <ul class="nav-menu">
+                    <li class="dropdown">
+                        <span>Products <i class="fas fa-chevron-down"></i></span>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">UltraEdit</a></li>
+                            <li><a href="#">UltraCompare</a></li>
+                            <li><a href="#">UEStudio</a></li>
+                            <li><a href="#">UltraFinder</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <span>Pricing <i class="fas fa-chevron-down"></i></span>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Individual License</a></li>
+                            <li><a href="#">Business License</a></li>
+                            <li><a href="#">Volume Discounts</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <span>Resources <i class="fas fa-chevron-down"></i></span>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">Tutorials</a></li>
+                            <li><a href="#">Support</a></li>
+                            <li><a href="#">Community</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <span>About Us <i class="fas fa-chevron-down"></i></span>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Our Story</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </li>
+                    <li class="language-selector">
+                        <img src="https://www.ultraedit.com/wp-content/themes/Divi_Child/img/Lang.png" alt="Language">
+                        <select id="languageSelect">
+                            <option value="en">English</option>
+                            <option value="es">Español</option>
+                            <option value="fr">Français</option>
+                            <option value="de">Deutsch</option>
+                            <option value="it">Italiano</option>
+                            <option value="ja">日本語</option>
+                        </select>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="first">
+            <div class="os-detection" id="osDetection">
+                <i class="fas fa-info-circle"></i>
+                <span id="osMessage">We've detected your operating system. Recommended downloads are highlighted below.</span>
+            </div>
+            
+            <span> Download <b>UltraEdit</b> for Windows<img width="34"
+                    src="https://www.ultraedit.com/wp-content/uploads/2022/10/Reviews.png" alt="Reviews"></span>
+            <p>Download and try UltraEdit before you buy it! This download includes the full Windows version of the
+                text editor.</p>
+            <div>
+                <button class="btn main-cta" id="mainDownloadBtn">
+                    <i class="fas fa-download"></i>
+                    DOWNLOAD FOR <span id="detectedOS">WINDOWS</span>
+                </button>
+                <button class="btn secondary" onclick="toggleOtherVersions()">
+                    <i class="fas fa-list"></i>
+                    OTHER VERSIONS
+                </button>
+            </div>
+        </section>
+
+        <section class="second">
+            <div class="download">
+                <img src="https://www.ultraedit.com/wp-content/uploads/2022/11/UE.png" alt="UltraEdit Icon">
+                <div class="download-info">
+                    <span>Download UltraEdit </span>
+                    <span class="small">v2023.1 (released 08/16/2023) | Hotfix</span>
+                </div>
+                <div class="download-stats">
+                    <span class="download-count">Downloads: <span id="downloadCounter">1,234,567</span></span>
+                </div>
+            </div>
+
+            <!-- Search and Filter -->
+            <div class="controls">
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="languageSearch" placeholder="Search languages..." onkeyup="filterLanguages()">
+                </div>
+                <div class="view-toggle">
+                    <button class="toggle-btn active" onclick="setView('grid')" id="gridView">
+                        <i class="fas fa-th"></i>
+                    </button>
+                    <button class="toggle-btn" onclick="setView('list')" id="listView">
+                        <i class="fas fa-list"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid" id="downloadGrid"> 
+                <!-- Main download button for single-click download -->
+                <div class="item featured">
+                    <div class="item-lang">🎯 Quick Download</div>
+                    <a href="ue_english.exe" download="UltraEdit_English.exe" class="btn blue main-download">
+                        <i class="fas fa-download"></i> Download UltraEdit Now
+                    </a>
+                    <p class="file-info">Direct download - No waiting, no modals</p>
+                </div>
+                
+                <!-- Language grid will be populated by JavaScript -->
+            </div>
+            
+            <!-- Download Progress Modal -->
+            <div class="modal" id="downloadModal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <h3>Download Progress</h3>
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                        <span class="progress-text" id="progressText">0%</span>
+                    </div>
+                    <p id="downloadStatus">Preparing download...</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
