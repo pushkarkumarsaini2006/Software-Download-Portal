@@ -7,15 +7,14 @@
     <meta name="description" content="Download UltraEdit, a powerful and versatile text editor for Windows. Try before you buy! Full version download available with free trial.">
     <meta name="theme-color" content="#00b6d1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; font-src https://cdnjs.cloudflare.com; img-src 'self' https: data:; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'">
-    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; font-src https://cdnjs.cloudflare.com; img-src 'self' https: data:; connect-src 'self' https:; base-uri 'self'; form-action 'self'">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <title>Download UltraEdit text editor for Windows</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="dns-prefetch" href="https://www.ultraedit.com">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" id="fontAwesomeCSS">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
     <style>
         @font-face {
@@ -116,7 +115,7 @@
                     <i class="fas fa-download" aria-hidden="true"></i>
                     DOWNLOAD FOR <span id="detectedOS">WINDOWS</span>
                 </button>
-                <button class="btn secondary" onclick="toggleOtherVersions()" aria-label="Show other versions">
+                <button class="btn secondary" id="otherVersionsBtn" aria-label="Show other versions">
                     <i class="fas fa-list" aria-hidden="true"></i>
                     OTHER VERSIONS
                 </button>
@@ -140,13 +139,13 @@
                 <div class="search-container">
                     <i class="fas fa-search" aria-hidden="true"></i>
                     <label for="languageSearch" class="sr-only">Search languages</label>
-                    <input type="text" id="languageSearch" placeholder="Search languages..." onkeyup="filterLanguages()" aria-label="Search languages">
+                    <input type="text" id="languageSearch" placeholder="Search languages..." aria-label="Search languages">
                 </div>
                 <div class="view-toggle" role="group" aria-label="View toggle">
-                    <button class="toggle-btn active" onclick="setView('grid')" id="gridView" aria-label="Grid view" aria-pressed="true">
+                    <button class="toggle-btn active" id="gridView" aria-label="Grid view" aria-pressed="true">
                         <i class="fas fa-th" aria-hidden="true"></i>
                     </button>
-                    <button class="toggle-btn" onclick="setView('list')" id="listView" aria-label="List view" aria-pressed="false">
+                    <button class="toggle-btn" id="listView" aria-label="List view" aria-pressed="false">
                         <i class="fas fa-list" aria-hidden="true"></i>
                     </button>
                 </div>
@@ -168,7 +167,7 @@
             <!-- Download Progress Modal -->
             <div class="modal" id="downloadModal" role="dialog" aria-labelledby="modal-title">
                 <div class="modal-content">
-                    <button class="close" onclick="closeModal()" aria-label="Close download progress dialog">&times;</button>
+                    <button class="close" id="closeModalBtn" aria-label="Close download progress dialog">&times;</button>
                     <h3 id="modal-title">Download Progress</h3>
                     <div class="progress-container">
                         <div class="progress-bar">
