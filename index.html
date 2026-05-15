@@ -7,6 +7,9 @@
     <meta name="description" content="Download UltraEdit, a powerful and versatile text editor for Windows. Try before you buy! Full version download available with free trial.">
     <meta name="theme-color" content="#00b6d1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; font-src https://cdnjs.cloudflare.com; img-src 'self' https: data:; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <title>Download UltraEdit text editor for Windows</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
@@ -80,19 +83,19 @@
                             <li><a href="#" role="menuitem">Contact</a></li>
                         </ul>
                     </li>
-                    <li class="language-selector">
-                        <img src="https://www.ultraedit.com/wp-content/themes/Divi_Child/img/Lang.png" alt="Language selector" width="24" height="18" loading="lazy">
-                        <label for="languageSelect" class="sr-only">Select language</label>
-                        <select id="languageSelect" aria-label="Select language">
-                            <option value="en">English</option>
-                            <option value="es">Español</option>
-                            <option value="fr">Français</option>
-                            <option value="de">Deutsch</option>
-                            <option value="it">Italiano</option>
-                            <option value="ja">日本語</option>
-                        </select>
-                    </li>
                 </ul>
+                <div class="language-selector">
+                    <img src="https://www.ultraedit.com/wp-content/themes/Divi_Child/img/Lang.png" alt="Language selector icon" width="24" height="18" loading="lazy">
+                    <label for="languageSelect" class="sr-only">Select language</label>
+                    <select id="languageSelect" aria-label="Select language">
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                        <option value="it">Italiano</option>
+                        <option value="ja">日本語</option>
+                    </select>
+                </div>
             </div>
         </nav>
     </header>
@@ -104,7 +107,7 @@
                 <span id="osMessage">We've detected your operating system. Recommended downloads are highlighted below.</span>
             </div>
             
-            <span> Download <b>UltraEdit</b> for Windows<img width="34" height="24"
+            <span> Download <strong class="app-name">UltraEdit</strong> for Windows<img width="34" height="24" aspect-ratio="34/24"
                     src="https://www.ultraedit.com/wp-content/uploads/2022/10/Reviews.png" alt="5-star review rating" loading="lazy"></span>
             <p>Download and try UltraEdit before you buy it! This download includes the full Windows version of the
                 text editor.</p>

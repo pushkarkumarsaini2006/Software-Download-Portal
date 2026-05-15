@@ -49,6 +49,12 @@ nav {
     z-index: 1000;
 }
 
+.right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
 .mobile-menu-toggle {
     display: none;
     font-size: 1.5rem;
@@ -148,11 +154,13 @@ nav {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    margin-left: 1rem;
 }
 
 .language-selector img {
     width: 24px;
     height: 18px;
+    aspect-ratio: 24/18;
 }
 
 .language-selector select {
@@ -197,14 +205,15 @@ nav {
     animation: fadeInUp 0.8s ease-out;
 }
 
-.first span b {
-    color: #00b6d1;
+.first span .app-name {
+    color: #004d7a;
     font-weight: 700;
 }
 
 section span img {
     width: 82px;
     height: auto;
+    aspect-ratio: 34/24;
     margin: 0 1rem;
     animation: bounce 2s infinite;
 }
@@ -304,9 +313,10 @@ section span img {
     gap: 1rem;
     margin-bottom: 2rem;
     padding: 1.5rem;
-    background: #f8f9fa;
+    background: #e8ecf1;
     border-radius: 12px;
     animation: fadeInUp 0.8s ease-out 0.4s both;
+    color: #333;
 }
 
 .download img {
@@ -329,7 +339,7 @@ section span img {
 
 .download-count {
     font-weight: 600;
-    color: #1a7e1a;
+    color: #0d470d;
 }
 
 .controls {
@@ -904,7 +914,7 @@ section span img {
     gap: 1rem;
     margin-bottom: 2rem;
     padding: 1.5rem;
-    background: #f8f9fa;
+    background: #e8ecf1;
     border-radius: 12px;
     animation: fadeInUp 0.8s ease-out 0.4s both;
 }
@@ -927,7 +937,7 @@ section span img {
 
 .download-count {
     font-weight: 600;
-    color: #28a745;
+    color: #0d470d;
 }
 
 .controls {
