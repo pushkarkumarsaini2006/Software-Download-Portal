@@ -199,6 +199,32 @@ nav {
     text-align: center;
 }
 
+/* Toast notifications */
+.toast {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    background: rgba(0,0,0,0.85);
+    color: #fff;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 200ms ease, transform 200ms ease;
+    z-index: 3000;
+    font-weight: 600;
+}
+
+.toast.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.toast + .toast { margin-top: 0.5rem; }
+
+}
+
 .first span {
     font-size: 2.5rem;
     font-weight: 300;
